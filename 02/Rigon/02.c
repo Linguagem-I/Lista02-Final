@@ -40,8 +40,9 @@ float analisePoluicao(float indice){
   return indice;
 }
 
-float main(){
+int main(){
   indice = indicePoluicao();
   analisePoluicao(indice);
+  return 0;
 
 }
