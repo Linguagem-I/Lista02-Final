@@ -15,7 +15,7 @@ float valorDeposito(){
   return depositado;
 }
 
-float rendimento(float aux){
+void rendimento(float aux){
   int i = 0;
   float taxa = 0.65, juros;
 
@@ -24,7 +24,6 @@ float rendimento(float aux){
     aux += juros;
   }
   printf("Total apos um ano de aplicacao = R$%.2f\n", aux);
-  return 0;
 }
 
 int main(){
