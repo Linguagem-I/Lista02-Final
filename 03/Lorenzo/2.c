@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+char maiuscula(char c);
+
 char maiuscula(char c){
 
 	c = c - 32;

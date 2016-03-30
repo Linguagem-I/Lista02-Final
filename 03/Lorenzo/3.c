@@ -25,6 +25,22 @@ int main(int argc, char const *argv[]){
 		
 	}
 
+	loop = 1;
+
+	while (loop == 1){
+		i = strchr(frase, 'E');
+		
+		if (i != NULL){
+			posicaoCaracString = i - frase;	
+			frase[posicaoCaracString] = '3';
+		} else {
+			loop = 0;
+		}
+		
+	}
+
+
+
 	printf("%s\n", frase);
 
 	return 0;
