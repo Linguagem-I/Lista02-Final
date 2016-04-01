@@ -6,36 +6,33 @@ inicial. */
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+ 
+int main (){
+    
+    char frase[201], *palavra, *point, null;
+    palavra = &null;
 
+    printf("Digite uma frase até 200 Caracteres\n");
+    
+    fgets(frase, 201, stdin);
+    
+    printf("Digite uma palavra\n");
+    
+    scanf(" %[^\n]s", palavra);
 
-int main(){
-
-  int i, j, locali, localf, tamanho;
-  printf("Hello, World!\n");
-  char string[201];
-  char busca[20];
-  char *pointi, *pointf;
-
-  printf("Entre com uma string de ate 200 caracteres\n");
-  fgets(string,201,stdin);
-  printf("Expressao a ser buscada:\n");
-  fgets(busca,20,stdin);
-
-    if( strstr(string,busca)){
-      printf("substring localizada\n");
-      pointi = strstr(string,busca);
-      printf("%s\n", pointi);
-
-      for(i=0;i < strlen(string);i++){
-        if ( string[i] == *pointi){
-          printf("Posição no vetor/string %d\n", i+1);
-          break;
-        }
-      }
+    size_t tamBusca = strlen(palavra) - 1; // determina o tamanho máximo da palavra para a busca
+    char busca[tamBusca]; // cria um char com o tamanho correto
+    
+    strcpy(busca, palavra); 
+    
+    point = strstr(frase, busca); // procura "busca" dentro de frase e retorna um ponteiro
+    
+    if (point != NULL){
+        int posicao = point - frase;
+        printf("A palavra se encontra na frase na seguinte posição: %d\n", posicao);
+    } else {
+        printf("A palavra nao se encontra na frase\n");
     }
-    else
-      printf("nao localizada!\n");
-
-  return 0;
-
-}
+    
+    return 0;
+} 
