@@ -7,6 +7,7 @@ protótipo desta função pode ser dado por: char maiuscula(char c);
 */
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
 char *strupr(char *str)

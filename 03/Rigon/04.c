@@ -8,7 +8,7 @@ palíndromas: ovo, natan, sos, arara, etc.). */
 
 int main(){
   int i, j, tam, palindromo;
-  char palavra[21], teste[];
+  char palavra[21];
 
   fgets(palavra,21,stdin);
   tam = strlen(palavra) - 1;

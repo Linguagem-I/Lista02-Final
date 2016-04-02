@@ -15,9 +15,10 @@ int main(){
   char caractere[2];
   char frase[201];
 
-  fgets(caractere,2,stdin);
-	getchar();
+  printf("Insira a frase:\n");
   fgets(frase,201,stdin);
+  printf("Insira o caracter a ser modificado:\n");
+  fgets(caractere,2,stdin);
 
   tam = strlen(frase) - 1;
 
@@ -31,6 +32,5 @@ int main(){
   }
 
   printf("%s\n", frase);
-
   return 0;
 }
