@@ -4,7 +4,9 @@
  
 int main (){
     
-    char frase[200], *palavra, *point;
+    char frase[200], *palavra, *point, lixo;
+    *palavra = lixo;
+
     
     printf("Digite uma frase até 200 Caracteres\n");
     
@@ -23,7 +25,7 @@ int main (){
     
     if (point != NULL){
         int posicao = point - frase;
-        printf("A palavra se encontra na frase na seguinte posição: %d", posicao);
+        printf("A palavra se encontra na frase na seguinte posição: %d\n", posicao);
     } else {
         printf("A palavra nao se encontra na frase\n");
     }
