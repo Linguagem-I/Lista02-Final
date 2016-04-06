@@ -28,7 +28,7 @@ int main(int argc, char const *argv[]){
 	loop = 1;
 
 	while (loop == 1){
-		i = strchr(frase, 'E');
+		i = strchr(frase, 'e');
 		
 		if (i != NULL){
 			posicaoCaracString = i - frase;	
