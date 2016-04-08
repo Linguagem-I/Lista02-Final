@@ -1,3 +1,7 @@
+/* 1. Escreva uma função recursiva para multiplicação de dois números
+naturais, através de somas sucessivas (Ex.: 6 * 4 = 4+4+4+4+4+4).
+*/
+
 #include "stdio.h"
 
 int soma(n1, n2){
@@ -20,18 +24,3 @@ int main(){
 
   return 0;
 }
-
-/*
-
-N1  N2
-6   3
-6   2
-6   1
-
-6   6
-12  6
-18  6
-24
-
-
-*/

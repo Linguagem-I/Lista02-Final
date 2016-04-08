@@ -1,3 +1,8 @@
+/*
+4. Dado uma base n, n>1, calcule recursivamente o valor de n^x. O usuário
+deve entrar com o valor de n e x. Exemplo: potencia(3,2) deve retornar
+9.*/
+
 #include <stdio.h>
 
 int potencia(int base, int expoente){

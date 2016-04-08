@@ -1,3 +1,6 @@
+/*2. Escreva uma função recursiva para efetuar a soma de dois números
+naturais através de incrementos sucessivos. Ex: 3 + 2 = 3 + 1 + 1*/
+
 #include "stdio.h"
 
 int soma(num1, num2){
