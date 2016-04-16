@@ -40,9 +40,9 @@ int main(){
 int desconto(int ano){
   int porcentagem;
       if ( ano >= 2000)
-        porcentagem = 12;
-      else
         porcentagem = 7;
+      else
+        porcentagem = 12;
   return porcentagem;
 }
 
