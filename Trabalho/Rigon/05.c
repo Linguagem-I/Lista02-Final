@@ -1,3 +1,7 @@
+/* 5. Elabore um algoritmo que informe se um dado ano é ou não é bissexto. Obs: um ano
+é bissexto se ele for divisível por 400 ou se ele for divisível por 4 e não por 100.
+*/
+
 #include "stdlib.h"
 #include "stdio.h"
 

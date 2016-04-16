@@ -1,3 +1,7 @@
+/*7. Escrever um programa em C para ler três valores do teclado e informar se eles
+formam um triângulo. Escreva uma função que faça a análise e retorne seu tipo
+(equilátero, isósceles ou escaleno).*/
+
 #include "stdlib.h"
 #include "stdio.h"
 
@@ -14,7 +18,7 @@ int main(){
 void analiseTriangulo(int a, int b, int c){
   if ( (a == b) && ( a == c) && (b == c)){
     printf("Triangulo Equilatero\n");
-  } else if ( (a == b) || ( b == c)) {
+  } else if ( (a == b) || ( b == c) || ( a == c)) {
     printf("Triangulo isosceles\n");
   } else printf("Triangulo escaleno\n");
 }

@@ -1,3 +1,10 @@
+/*
+6. Escrever um programa em C com uma função para calcular a média final dadas as
+notas de 3 provas (entradas) e produzir uma saída com a média e a situação do aluno de
+acordo com o seguinte critério: média >= 7, aprovado; 5 < média < 7, Exame; média <
+5, reprovado. A função deve retornar A para “Aprovado”, E para “Exame” e R para
+“Reprovado”.
+*/
 #include "stdlib.h"
 #include "stdio.h"
 
