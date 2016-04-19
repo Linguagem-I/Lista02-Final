@@ -4,7 +4,7 @@
 void analiseTriangulo(int a, int b, int c){
   if ( (a == b) && ( a == c) && (b == c)){
     printf("Triangulo Equilatero\n");
-  } else if ( (a == b) || ( b == c)) {
+  } else if ( (a == b) || ( b == c)  || ( a == c)) {
     printf("Triangulo isosceles\n");
   } else printf("Triangulo escaleno\n");
 }
