@@ -53,7 +53,7 @@ float aproveitamentoCasa(int vitC, int empC){
 
   pontosC += vitC * 3;
   pontosC += empC * 1;
-  aprovCasa = (pontosC * 100.0) / 54.0;
+  aprovCasa = (pontosC * 100.0) / 57.0;
   return aprovCasa;
 }
 
@@ -76,7 +76,7 @@ float aproveitamentoForaCasa(int vitFC, int empFC){
   float aprovForaCasa = 0.0;
   pontosFC += vitFC * 3;
   pontosFC += empFC * 1;
-  aprovForaCasa = (pontosFC * 100.0) / 54.0;
+  aprovForaCasa = (pontosFC * 100.0) / 57.0;
   return aprovForaCasa;
 }
 
