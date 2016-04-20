@@ -2,8 +2,31 @@
 #include <stdlib.h>
 #include <string.h>
 
+char *strupr(char *str)
+{
+  unsigned char *p = (unsigned char *)str;
+
+  while (*p) {
+     *p = toupper(*p);
+      p++;
+  }
+  return str;
+}
+
+char *strlwr(char *str)
+{
+  unsigned char *p = (unsigned char *)str;
+
+  while (*p) {
+     *p = tolower(*p);
+      p++;
+  }
+  return str;
+}
+
 int main()
 {
+  //COLETA DADOS ATE O USUARIO DIGITAR '0'
   char **nomes = (char **) malloc(sizeof(char *)), *maiorN, *menorN;
   float *salarios = (float *) malloc(sizeof(float)), maiorS, menorS, media = 0;
   int decisao = 1, i, k, tamanho = 0;
@@ -23,10 +46,11 @@ int main()
     scanf("%d", &decisao);
   }
 
+  //VERIFICA MAIOR E MENOR SALARIO COM O RESPECTIVO NOME DO FUNCIONARIO
   menorS = salarios[0];
   maiorS = salarios[0];
   menorN = nomes[0];
-  menorN = nomes[0];
+  maiorN = nomes[0];
 
   for (k=1; k < i; k++) {
     if (salarios[k] > maiorS){
@@ -38,15 +62,17 @@ int main()
     }
   }
 
+  //FAZ MEDIA DOS SALARIOS
   for (k=0; k < i; k++) {
     media = media + salarios[k];
   }
 
   media = media / i;
 
-  printf("FUNCIONARIO COM MAIOR SALARIO: %s   %0.2f\n", maiorN, maiorS);
-  printf("FUNCIONARIO COM MENOR SALARIO: %s   %0.2f\n", menorN, menorS);
-  printf("\nA MEDIA DE SALARIO DOS FUNCIONARIOS: %0.2f\n", media);
+  //PRINTA OS RESULTADOS NA TELA
+  printf("%s   R$%0.2f\n", strupr(maiorN), maiorS);
+  printf("%s   R$%0.2f\n", strlwr(menorN), menorS);
+  printf("Media: %0.2f\n", media);
 
   return 0;
 }
