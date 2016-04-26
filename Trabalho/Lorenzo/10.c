@@ -42,7 +42,7 @@ int main()
     __fpurge(stdin); //fflush(stdin) para Windows
     scanf("%f", &salarios[i]);
 
-    printf("\nDigite 1 para cadastrar mais um funcionario ou 0 para parar o progroama\n");
+    printf("\nDigite 1 para cadastrar mais um funcionario ou 0 para parar o progroama: ");
     scanf("%d", &decisao);
   }
 
