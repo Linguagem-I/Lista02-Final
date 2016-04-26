@@ -26,7 +26,6 @@ char *strlwr(char *str)
 
 int main()
 {
-  //COLETA DADOS ATE O USUARIO DIGITAR '0'
   char **nomes = (char **) malloc(sizeof(char *)), *maiorN, *menorN;
   float *salarios = (float *) malloc(sizeof(float)), maiorS, menorS, media = 0;
   int decisao = 1, i, k, tamanho = 0;
@@ -40,13 +39,13 @@ int main()
 
     printf("\nDigite o Salario do Funcionario: ");
     salarios = (float *) realloc(salarios, sizeof(float) * (i + 1));
+    __fpurge(stdin); //fflush(stdin) para Windows
     scanf("%f", &salarios[i]);
 
     printf("\nDigite 1 para cadastrar mais um funcionario ou 0 para parar o progroama\n");
     scanf("%d", &decisao);
   }
 
-  //VERIFICA MAIOR E MENOR SALARIO COM O RESPECTIVO NOME DO FUNCIONARIO
   menorS = salarios[0];
   maiorS = salarios[0];
   menorN = nomes[0];
@@ -62,14 +61,12 @@ int main()
     }
   }
 
-  //FAZ MEDIA DOS SALARIOS
   for (k=0; k < i; k++) {
     media = media + salarios[k];
   }
 
   media = media / i;
 
-  //PRINTA OS RESULTADOS NA TELA
   printf("%s   R$%0.2f\n", strupr(maiorN), maiorS);
   printf("%s   R$%0.2f\n", strlwr(menorN), menorS);
   printf("Media: %0.2f\n", media);
