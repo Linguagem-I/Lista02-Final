@@ -26,16 +26,34 @@ char *strlwr(char *str)
 
 int main()
 {
-  char **nomes = (char **) malloc(sizeof(char *)), *maiorN, *menorN;
+  char **nomes = (char **) malloc(sizeof(char *)), *maiorN, *menorN, *esp, ult;
   float *salarios = (float *) malloc(sizeof(float)), maiorS, menorS, media = 0;
   int decisao = 1, i, k, tamanho = 0;
 
   for(i=0; decisao == 1; i++){
     printf("\nDigite o nome completo do Funcionario: ");
     nomes[i] = (char *) malloc(sizeof(char));
-    scanf(" %s", nomes[i]);
-    tamanho = tamanho + strlen(nomes[i]);
-    nomes = (char **) realloc(nomes, sizeof(char *) * tamanho);
+    scanf(" %[^\n]", nomes[i]);
+
+    esp = strchr(nomes[i], ' ');
+
+		if (esp == NULL){
+      printf("\n***** USUARIO INVALIDO DIGITE UM NOME COMPLESTO *****\n");
+      i--;
+      continue;
+		} else {
+      ult = nomes[i][strlen(nomes[i]) - 1];
+      if (ult < 65 || ult > 90) {
+        if (ult < 97 || ult > 122){
+          printf("\n***** USUARIO INVALIDO DIGITE UM NOME COMPLESTO *****\n");
+          i--;
+          continue;
+        }
+      } else {
+        tamanho = tamanho + strlen(nomes[i]);
+        nomes = (char **) realloc(nomes, sizeof(char *) * tamanho);
+      }
+    }
 
     printf("\nDigite o Salario do Funcionario: ");
     salarios = (float *) realloc(salarios, sizeof(float) * (i + 1));
