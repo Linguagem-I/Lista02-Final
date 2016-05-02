@@ -1,16 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-int somanumero();
+void somanumero();
 
 int main(){
   int x;
-  x=somanumero();
+  somanumero();
 
   return 0;
 }
 
-int somanumero(){
+void somanumero(){
   int i, n, soma = 0;
   for(i=0;i<8;i++){
     scanf("%d", &n);
@@ -23,5 +23,4 @@ int somanumero(){
     }
   }
   printf("%d\n", soma);
-  return soma;
 }

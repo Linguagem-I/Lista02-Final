@@ -26,7 +26,7 @@ int main(){
     do{
       printf("Entre com o resultado dos jogos fora de casa(vitorias, empates, derrotas) \n");
       scanf("%d %d %d", &vitFC, &empFC, &derFC);
-      somaF = vitFC, empFC, derFC;
+      somaF = vitFC + empFC + derFC;
       if (somaF<19){
         printf("Numero invalido, tente novamente");
       }
@@ -35,7 +35,7 @@ int main(){
     apfc=aproveitamentoFC(pontosFC);
 
     totalpontos=quantidadetotalPontos(pontosC, pontosFC);
-    apt=aproveitamentototal(apt,apfc);
+    apt=aproveitamentototal(apc,apfc);
 
     printf("Total de pontos do time: %d, Aproveitamento em casa %f, Aproveitamento fora de casa %f, Aproveitamento total %f \n", totalpontos, apc, apfc, apt);
 
@@ -61,6 +61,6 @@ int quantidadetotalPontos(int pontosC, int pontosFC){
 }
 
 float aproveitamentototal(float apc, float apfc){
-  float aproveitamentototal=apc+apfc;
+  float aproveitamentototal=(apc+apfc)/2;
   return aproveitamentototal;
 }

@@ -2,19 +2,19 @@
 #include <stdlib.h>
 #include <string.h>
 
-float somaMedia(float media);
+float somaMedia();
 void situacao(float soma);
 
 int main(){
-  float x, soma;
-  x=somaMedia(soma);
-  situacao(x);
+  float soma;
+  soma=somaMedia();
+  situacao(soma);
 
   return 0;
 }
 
-float somaMedia(float media){
-  float n1,n2,n3;
+float somaMedia(){
+  float n1,n2,n3, media;
   scanf("%f %f %f", &n1, &n2, &n3);
   media = (n1+n2+n3)/3;
   return media;

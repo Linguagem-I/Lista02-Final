@@ -14,7 +14,7 @@ int main(){
 }
 
 
-int lerAno(int n){
+int lerAno(){
   int a;
   scanf("%d", &a);
   return a;
