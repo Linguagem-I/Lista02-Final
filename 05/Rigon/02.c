@@ -8,8 +8,8 @@ exibir um histograma na tela, além de outras informações, conforme é mostrad
 #include <stdlib.h>
 
 int main(){
-  int tamturma, i, j;
-  float media = 0.0, total = 0.0, maior, menor;
+  int tamturma, i,l;
+  float media = 0.0, total = 0.0, maior, menor, j = 0.0, k = 3.0;
 
   printf("Tamanho da turma?\n");
   scanf("%d", &tamturma);
@@ -26,7 +26,6 @@ int main(){
 
     if ( notas[i] < menor )
       menor = notas[i];
-
     total+= notas[i];
   }
 
@@ -35,64 +34,27 @@ int main(){
   printf("Resultado da avaliacao da TURMA A\n");
   printf("%15s %.1f\n", "Menor nota:", menor);
   printf("%15s %.1f\n", "Maior nota:", maior);
-  printf("Media da turma: %.1f\n", media);
+  printf("Media da turma: %.1f\n\n\n", media);
 
   printf("Histograma das notas:\n");
-  printf("%11s", "0.0 ~ 3.0:");
-  for(i=0;i<tamturma;i++){
-    if (notas[i] <= 3.0)
-      printf("*");
+  
+  for(i=0;i<10 && k <=10.0;i++){
+ 	
+  	printf("%.1f ~ %.1f :", j, k);
+  	
+	for(l=0;l<tamturma;l++){
+		if ( notas[l] <= k && notas[l] > j)
+  			printf("*");
+	  }
+  	printf("\n");
+  
+   	if ( i == 0 )
+  		j+= 3.1;
+	else
+	   j+=1;
+	   
+   	k+=1;
   }
-  printf("\n");
-
-  printf("%11s", "3.1 ~ 4.0:");
-  for(i=0;i<tamturma;i++){
-    if (notas[i] > 3.0 && notas[i] <= 4.0)
-      printf("*");
-  }
-    printf("\n");
-
-  printf("%11s", "4.1 ~ 5.0:");
-  for(i=0;i<tamturma;i++){
-    if (notas[i] > 4 && notas[i] <= 5.0)
-      printf("*");
-  }
-    printf("\n");
-
-  printf("%11s", "5.1 ~ 6.0:");
-  for(i=0;i<tamturma;i++){
-    if (notas[i] > 5 && notas[i] <= 6.0)
-      printf("*");
-  }
-    printf("\n");
-
-  printf("%11s", "6.1 ~ 7.0:");
-  for(i=0;i<tamturma;i++){
-    if (notas[i] > 6 && notas[i] <= 7.0)
-      printf("*");
-  }
-    printf("\n");
-
-  printf("%11s", "7.1 ~ 8.0:");
-  for(i=0;i<tamturma;i++){
-    if (notas[i] > 7 && notas[i] <= 8.0)
-      printf("*");
-  }
-    printf("\n");
-
-  printf("%11s", "8.1 ~ 9.0:");
-  for(i=0;i<tamturma;i++){
-    if (notas[i] > 8 && notas[i] <= 9.0)
-      printf("*");
-  }
-    printf("\n");
-
-  printf("%11s", "9.1 ~ 10.0:");
-  for(i=0;i<tamturma;i++){
-    if (notas[i] > 9 && notas[i] <= 10.0)
-      printf("*");
-  }
-    printf("\n");
-
+  
   return 0;
 }
