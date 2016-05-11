@@ -28,7 +28,7 @@ int main(){
   totalpontos = quantidadePontosTotal(pontosC, pontosFC);
   apc = aproveitamentoCasa(vitC, empC);
   apfc = aproveitamentoForaCasa(vitFC, empFC);
-  apt = apc + apfc / 2;
+  apt = (apc + apfc) / 2.0;
   printf("Total de pontos: %d, aproveitamento em casa %.2f%%, aproveitamento fora de casa %.2f%%, aproveitamento total %.2f%% \n", totalpontos, apc, apfc, apt);
   return 0;
 }
@@ -54,6 +54,7 @@ float aproveitamentoCasa(int vitC, int empC){
   pontosC += vitC * 3;
   pontosC += empC * 1;
   aprovCasa = (pontosC * 100.0) / 57.0;
+  printf("CASAAA %f\n", aprovCasa);
   return aprovCasa;
 }
 
