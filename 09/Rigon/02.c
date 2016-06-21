@@ -16,7 +16,7 @@ FIM_REGISTRO
 
 struct pessoa {
   char nome[50];
-  int sexo[10];
+  char sexo[10];
   float peso;
   float altura;
   int cpf;
